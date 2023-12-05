@@ -1,0 +1,233 @@
+body {
+    font-family: "Montserrat";
+    text-align: center;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Montserrat-Bold";
+}
+
+p {
+    color: #c1c1c1;
+}
+
+
+/* Headings */
+
+.big-heading {
+    font-family: "Montserrat-Black";
+    font-size: 3.5rem;
+    line-height: 1.5;
+}
+
+.section-heading {
+    font-size: 3rem;
+    line-height: 1.5;
+}
+
+
+/* Containers */
+
+.container-fluid {
+    padding: 7% 15%;
+}
+
+
+/* Sections */
+
+.colored-section {
+    background-color: #e5d3b3;
+    color: #4a332d;
+}
+
+.white-section {
+    background-color: #4a332d;
+}
+
+
+/* Navigation Bar */
+
+.navbar {
+    padding: 0 0 4.5rem;
+}
+
+.navbar-brand {
+    font-family: "Ubuntu";
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.nav-item {
+    padding: 0 18px;
+}
+
+.nav-link {
+    font-size: 1.2rem;
+    font-family: "Montserrat-Light";
+}
+
+
+/* Buttons */
+
+.download-button {
+    margin: 5% 3% 5% 0;
+}
+
+
+/* Title Section */
+
+#title {
+    background-color: #e5d3b3;
+    color: #4a332d;
+    text-align: left;
+}
+
+#title .container-fluid {
+    padding: 3% 15% 7%;
+}
+
+@media (max-width: 1028px) {
+    #title {
+        text-align: center;
+    }
+    .title-image {
+        position: static;
+        transform: rotate(0);
+    }
+}
+
+.Meters {
+    font-size: larger;
+    text-align: center;
+}
+
+.ring {
+    position: relative;
+    --pointerleft: 11%;
+    --pointertop: 11%;
+    --pointerdeg: -45deg;
+    width: 50vmin;
+    height: 50vmin;
+    background-image: radial-gradient(red 0, red 50%, transparent 50%, transparent 100%), radial-gradient(green 0, green 50%, transparent 50%, transparent 100%), radial-gradient(white 0, white 60%, transparent 60%), conic-gradient(orange 0, green 130deg, white 130deg, white 230deg, red 230deg, orange 360deg);
+    background-size: 11% 11%, 11% 11%, 100% 100%, 100% 100%;
+    background-repeat: no-repeat;
+    background-position: 9.2% 82.3%, 90.8% 82.3%, center center, center center;
+    border-radius: 50%;
+    border-style: none;
+    margin: 0px auto 0px;
+}
+
+.ring::after {
+    position: absolute;
+    content: '';
+    width: 5%;
+    height: 15%;
+    left: var(--pointerleft);
+    top: var(--pointertop);
+    transform: rotate(var(--pointerdeg));
+    border-style: solid;
+    border-width: 0.5vmin;
+    border-radius: 2vmin;
+    background-color: rgb(247, 244, 244);
+    padding: 0px auto 0px;
+}
+
+.speed {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    text-align: center;
+    color: gray;
+}
+
+.speed .number {
+    font-size: 6vw;
+}
+
+.speed .units {
+    font-size: 3vw;
+}
+
+.ReadingLabel {
+    font-size: 2rem;
+    text-align: center;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+
+/* Hide default HTML checkbox */
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+
+/* The slider */
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #bd958b;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked+.slider {
+    background-color: #4a332d;
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px #4a332d;
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+
+/* Rounded sliders */
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+.WaterSupplyTime {
+    font-size: 20px;
+}

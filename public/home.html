@@ -1,0 +1,185 @@
+<!-- Complete Project Details at: https://RandomNerdTutorials.com/ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Horticulture Monitoring System</title>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-database.js"></script>
+
+    <script>
+    // REPLACE WITH YOUR web app's Firebase configuration
+    // import { initializeApp } from "firebase/app";
+    // import { getDatabase } from "firebase/database";
+    // var firebaseConfig = {
+    //     apiKey: "AIzaSyDZrwJDY7-V8-MgP52l5RcwvcZIE6vcYYk",
+    //     authDomain: "smarthorticulturesystem.firebaseapp.com",
+    //     databaseURL: "https://smarthorticulturesystem-default-rtdb.asia-southeast1.firebasedatabase.app/",
+    //     projectId: "smarthorticulturesystem",
+    //     storageBucket: "smarthorticulturesystem.appspot.com",
+    //     messagingSenderId: "697071970114",
+    //     appId: "1:697071970114:web:8af5e3f935fe9439198adb",
+    //     measurementId: "G-RHRECH3P6Q"
+    // };
+  
+    // // Initialize Firebase
+    // const app= initializeApp(firebaseConfig);
+    // var database = getdatabase(app);
+</script>
+<script src="app.js" defer></script>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- Bootstrap Scripts -->
+
+</head>
+
+<body>
+
+  <section class="colored-section" id="title">
+
+      <div class="container-fluid">
+
+          <!-- Nav Bar -->
+
+          <nav class="navbar navbar-expand-lg navbar-dark">
+
+              <a class="navbar-brand" href="">Smart Horticulture System</a>
+
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+              <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+
+                  <ul class="navbar-nav ml-auto">
+                      <li class="nav-item">
+                          <a class="nav-link" href="#">Current Readings</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="manualControl.html">Manual Control</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="meetOurTeam.html">Team</a>
+                      </li>
+                  </ul>
+
+              </div>
+
+
+          </nav>
+
+          <div class="row">
+
+              <div class="col-lg-3">
+
+              </div>
+
+              <div class="col-lg-6">
+                  <div class="ring">
+                      <div class="speed">
+                          <div class="number"><span id="reading-floatT"></span></div>
+                          <div class="units">Celcius</div>
+                      </div>
+                  </div>
+                  <br><br>
+                  <div>
+                      <h3 class="ReadingLabel">Temperature</h3>
+                  </div>
+                  <br><br>
+              </div>
+
+              <div class="col-lg-3">
+              </div>
+
+          </div>
+          <div class="row">
+              <div class="row">
+
+                  <div class="col-lg-3">
+
+                  </div>
+
+                  <div class="col-lg-6">
+                      <div class="ring">
+                          <div class="speed">
+                              <div class="number"><span id="reading-floatM"></span></div>
+                              <div class="units">%</div>
+                          </div>
+                      </div>
+                      <br><br>
+                      <div>
+                          <h3 class="ReadingLabel">Soil Moisture</h3>
+                      </div>
+                      <br><br>
+                  </div>
+
+                  <div class="col-lg-3">
+                  </div>
+
+              </div>
+              <div class="row">
+                  <div class="row">
+
+                      <div class="col-lg-3">
+
+                      </div>
+
+                      <div class="col-lg-6">
+                          <div class="ring">
+                              <div class="speed">
+                                  <div class="number"><span id="reading-floatH"></span></div>
+                                  <div class="units">%</div>
+                              </div>
+                          </div>
+                          <br><br>
+                          <div>
+                              <h3 class="ReadingLabel">Humidity</h3>
+                          </div>
+                          <br><br>
+                      </div>
+
+                      <div class="col-lg-3">
+                      </div>
+
+                  </div>
+                  <div class="row">
+
+                  </div>
+
+
+
+  </section>
+
+  <!-- Footer -->
+
+  <footer class=" white-section " id="footer ">
+      <div class="container-fluid ">
+          <i class="social-icon fab fa-facebook-f "></i>
+          <i class="social-icon fab fa-twitter "></i>
+          <i class="social-icon fab fa-instagram "></i>
+          <i class="social-icon fas fa-envelope "></i>
+          <p>Made with ❤ by Our Team</p>
+      </div>
+  </footer>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js " integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V " crossorigin="anonymous "></script>
+  <script src="js/index.js "></script>
+</body>
+
+</html>
